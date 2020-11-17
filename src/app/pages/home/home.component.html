@@ -1,0 +1,20 @@
+<app-smart-container>
+    <mat-card>
+        <mat-card-header>
+            <h2>Produtos</h2>
+        </mat-card-header>
+        <mat-card-content class="grid">
+                <mat-card *ngFor="let prod of products">
+                    <img mat-card-image src="{{ prod.imgUrl }}" alt="Imagem do Produto">
+                    <mat-card-content class="flex">
+                        <h3 class="mb-1 bold">{{ prod.title }}</h3>
+                        <span>R$: {{prod.price}}</span>
+                    </mat-card-content>
+                    <mat-card-actions class="btn-actions" style="justify-content: center;">
+                        <button mat-button (click)="buy(prod)" class="red">COMPRAR</button>
+                    </mat-card-actions>
+                </mat-card>
+        </mat-card-content>
+    </mat-card>
+</app-smart-container>
+S

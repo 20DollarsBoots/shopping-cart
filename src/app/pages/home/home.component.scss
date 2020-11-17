@@ -1,0 +1,27 @@
+.card {
+    width: 9rem;
+    height: 9rem;
+    margin: 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+.red {
+    color: red;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.bold {
+    font-weight: 800;
+}

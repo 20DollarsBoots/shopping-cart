@@ -1,0 +1,14 @@
+<app-smart-container>
+    <form [formGroup]="form">
+        <div class="div-login" fxLayout="column" fxLayoutGap="16px">
+            <h2>Login do Sistema</h2>
+            <mat-form-field>
+                <input matInput placeholder="Email" formControlName="email" type="email">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Senha" formControlName="password" type="password">
+            </mat-form-field>
+            <button mat-raised-button (click)="logar()">Logar</button>
+        </div>
+    </form>
+</app-smart-container>
