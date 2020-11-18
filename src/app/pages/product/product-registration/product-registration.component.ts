@@ -69,7 +69,7 @@ export class ProductRegistrationComponent extends Notifications implements OnIni
     this.product = this.form.value;
     this.productService.save(this.product).subscribe((cat)=>{
       this.showSuccess('Salvo com sucesso!');
-      this.router.navigate(['categoria']);
+      this.router.navigate(['produto']);
     }, err =>{
       this.showError('Deu erro, tente novamente', 'Atenção');
       console.error(err);
