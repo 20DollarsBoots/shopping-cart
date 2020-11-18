@@ -31,8 +31,9 @@ export class CategoryRegistrationComponent extends Notifications implements OnIn
     });
     this.route.params.subscribe((param) =>{
       if ( param ){
-        this.category = param as Category;
-        this.form.patchValue(this.category);
+        this.categoryService.searchById(param.id).subscribe((cat: Category) => {
+          this.form.patchValue(cat);
+        })
       }      
     })
   }

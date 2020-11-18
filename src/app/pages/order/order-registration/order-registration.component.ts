@@ -37,8 +37,9 @@ export class OrderRegistrationComponent extends Notifications implements OnInit 
     this.getUsers();
     this.route.params.subscribe((param) =>{
       if ( param ){
-        this.order = param as Order;
-        this.form.patchValue(this.order);
+        this.orderService.searchById(param.id).subscribe((od: Order) => {
+          this.form.patchValue(od);
+        })
       }      
     })
   }

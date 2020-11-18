@@ -44,8 +44,9 @@ export class OrderedItemsRegistrationComponent extends Notifications implements 
     this.getProducts();
     this.route.params.subscribe((param) =>{
       if ( param ){
-        this.orderedItem = param as OrderedItem;
-        this.form.patchValue(this.orderedItem);
+        this.orderedService.searchById(param.id).subscribe((ordered: OrderedItem) => {
+          this.form.patchValue(ordered);
+        })
       }      
     })
   }

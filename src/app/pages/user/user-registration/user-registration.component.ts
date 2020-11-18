@@ -39,8 +39,13 @@ export class UserRegistrationComponent extends Notifications implements OnInit {
     });
     this.route.params.subscribe((param) =>{
       if ( param ){
-        this.user = param as User;
-        this.form.patchValue(this.user);
+        this.route.params.subscribe((param) =>{
+          if ( param ){
+            this.userService.searchById(param.id).subscribe((user: User) => {
+              this.form.patchValue(user);
+            })
+          }      
+        })
       }      
     })
   }

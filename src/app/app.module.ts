@@ -90,7 +90,7 @@ import { Error404Component } from './pages/error/error404/error404.component';
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/'},
-    // { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true, deps: [Router]}
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true, deps: [Router]}
   ],
   bootstrap: [AppComponent]
 })

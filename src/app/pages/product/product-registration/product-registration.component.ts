@@ -40,8 +40,9 @@ export class ProductRegistrationComponent extends Notifications implements OnIni
     this.getCategories();
     this.route.params.subscribe((param) =>{
       if ( param ){
-        this.product = param as Product;
-        this.form.patchValue(this.product);
+        this.productService.searchById(param.id).subscribe((prod: Product) => {
+          this.form.patchValue(prod);
+        })
       }      
     })
   }

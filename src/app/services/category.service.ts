@@ -16,7 +16,7 @@ export class CategoryService extends AbstractService<Category> {
     }
 
     public searchByName(name:string):Observable<Array<Category>> {
-        return this.http.post<Array<Category>>(this.getUrl('search-by-name'), name);
+        return this.http.post<Array<Category>>(this.getUrl('search/name'), name);
     }
 
 }

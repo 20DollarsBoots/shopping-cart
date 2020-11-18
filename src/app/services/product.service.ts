@@ -16,7 +16,7 @@ export class ProductService extends AbstractService<Product> {
     }
 
     public searchByName(name:string):Observable<Array<Product>> {
-        return this.http.post<Array<Product>>(this.getUrl('search-by-name'), name);
+        return this.http.post<Array<Product>>(this.getUrl('search/name'), name);
     }
 
 }

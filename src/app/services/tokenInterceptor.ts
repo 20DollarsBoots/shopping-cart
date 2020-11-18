@@ -5,14 +5,14 @@ import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 
-// @Injectable()
+@Injectable()
 export class TokenInterceptor implements HttpInterceptor {
     constructor(private router: Router) {
 
     }
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        let token = localStorage.getItem('user_token');
+        let token = sessionStorage.getItem('user_token');
         if (token === null) {
             token = '';
         }
