@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url:'http://localhost:8280/shopping-cart-backend/services',
+  url:'http://localhost:8280/backend-shopp-1.0.0/services',
 };
 
 /*

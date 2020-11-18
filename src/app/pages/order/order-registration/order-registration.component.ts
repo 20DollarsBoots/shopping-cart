@@ -5,7 +5,7 @@ import { ToastService } from 'ng-uikit-pro-standard';
 import { Order } from 'src/app/models/Order';
 import { User } from 'src/app/models/User';
 import { OrderService } from 'src/app/services/order.service';
-import { UserService } from 'src/app/services/usuario.service';
+import { UserService } from 'src/app/services/user.service';
 import { Notifications } from 'src/app/utils/Notifications';
 
 @Component({

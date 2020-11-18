@@ -3,7 +3,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { ToastService } from 'ng-uikit-pro-standard';
 import { User } from 'src/app/models/User';
-import { UserService } from 'src/app/services/usuario.service';
+import { UserService } from 'src/app/services/user.service';
 import { Notifications } from 'src/app/utils/Notifications';
 
 @Component({

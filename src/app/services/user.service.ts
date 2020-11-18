@@ -16,10 +16,10 @@ export class UserService extends AbstractService<User> {
     }
 
     public searchByName(name:string):Observable<Array<User>> {
-        return this.http.post<Array<User>>(this.getUrl('search-by-name'), name);
+        return this.http.post<Array<User>>(this.getUrl('search/name'), name);
     }
 
     public logar(user:User):Observable<User> {
-        return this.http.post<User>(this.getUrl('sign-in'), user);
+        return this.http.post<User>(this.getUrl('signin'), user);
     }
 }

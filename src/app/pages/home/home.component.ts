@@ -16,22 +16,58 @@ export class HomeComponent extends Notifications implements OnInit {
 
   products = [ 
     {
-      title: 'string',
+      title: 'Martelo',
       description: 'string',
-      price: 1,
-      imgUrl: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+      price: 47.99,
+      imgUrl: 'https://images.emojiterra.com/google/android-10/512px/1f528.png'
     },
     {
-      title: 'string',
+      title: 'Alicate',
       description: 'string',
-      price: 1,
-      imgUrl: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+      price: 190.00,
+      imgUrl: 'https://images.emojiterra.com/google/android-10/512px/1f528.png'
     },
     {
-      title: 'string',
+      title: 'Martelo',
       description: 'string',
       price: 1,
-      imgUrl: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
+      imgUrl: 'https://images.emojiterra.com/google/android-10/512px/1f528.png'
+    },
+    {
+      title: 'Martelo',
+      description: 'string',
+      price: 47.99,
+      imgUrl: 'https://images.emojiterra.com/google/android-10/512px/1f528.png'
+    },
+    {
+      title: 'Alicate',
+      description: 'string',
+      price: 190.00,
+      imgUrl: 'https://images.emojiterra.com/google/android-10/512px/1f528.png'
+    },
+    {
+      title: 'Martelo',
+      description: 'string',
+      price: 1,
+      imgUrl: 'https://images.emojiterra.com/google/android-10/512px/1f528.png'
+    },
+    {
+      title: 'Martelo',
+      description: 'string',
+      price: 47.99,
+      imgUrl: 'https://images.emojiterra.com/google/android-10/512px/1f528.png'
+    },
+    {
+      title: 'Alicate',
+      description: 'string',
+      price: 190.00,
+      imgUrl: 'https://images.emojiterra.com/google/android-10/512px/1f528.png'
+    },
+    {
+      title: 'Martelo',
+      description: 'string',
+      price: 1,
+      imgUrl: 'https://images.emojiterra.com/google/android-10/512px/1f528.png'
     }
     ];
 
