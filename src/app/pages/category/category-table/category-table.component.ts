@@ -7,21 +7,6 @@ import { Category } from 'src/app/models/Category';
 import { Notifications } from 'src/app/utils/Notifications';
 import { ToastService } from 'ng-uikit-pro-standard';
 
-export interface PeriodicElement {
-  name: string;
-  id: number;
-  description: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {id: 1, name: 'Ferramentas', description: 'Exemplo :Martelo, Furadeira'},
-  {id: 2, name: 'Perfumaria', description: 'Exemplo: Perfumes, Desodorantes'},
-  {id: 3, name: 'Escolar', description: 'Exemplo, Estojo, Caderno'},
-  {id: 4, name: 'Alimentos', description: 'Exemplo: Bebidas, Comidas'},
-  {id: 5, name: 'Telefonia', description: 'Exemplo: Carregador, Fone de Ouvido'},
- 
-];
-
 @Component({
   selector: 'app-category-table',
   templateUrl: './category-table.component.html',
@@ -34,7 +19,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 export class CategoryTableComponent extends Notifications implements OnInit {
   public displayedColumns:any[] = ['id','name', 'description', 'actions'];
-  public dataSource:MatTableDataSource<Category> = new MatTableDataSource(ELEMENT_DATA);
+  public dataSource:MatTableDataSource<Category> = new MatTableDataSource();
   public form:FormGroup = new FormGroup({
     pesquisar:new FormControl('')
   })

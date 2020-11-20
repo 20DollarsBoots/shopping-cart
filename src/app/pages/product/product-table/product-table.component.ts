@@ -7,26 +7,6 @@ import { Product } from 'src/app/models/Product';
 import { ProductService } from 'src/app/services/product.service';
 import { Notifications } from 'src/app/utils/Notifications';
 
-export interface PeriodicElement {
-  name: string;
-  id: number;
-  price: string;
-  category: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {id: 1, name: 'Alicate', price:'19,99',category: 'Ferramentas'},
-  {id: 2, name: 'Martelo', price:'33,60',category: 'Ferramentas'},
-  {id: 3, name: 'Perfume', price:'189,87',category: 'Perfumaria'},
-  {id: 4, name: 'Caderno', price:'25,99',category: 'Escolar'},
-  {id: 5, name: 'Coca-Cola', price:'7,80',category: 'Alimentos'},
-  {id: 6, name: 'Estojo',  price:'10,00',category: 'Escolar'},
-  {id: 7, name: 'Mochila',  price:'44,90',category: 'Escolar'},
-  {id: 8, name: 'Carregador',  price:'38,50',category: 'Telefonia'},
-  {id: 9, name: 'Capa para Celular',  price:'25,00',category: 'Telefonia'},
-  {id: 10, name: 'Chocolate barra',  price:'14,99',category: 'Alimentos'},
-];
-
 @Component({
   selector: 'app-product-table',
   templateUrl: './product-table.component.html',
@@ -38,7 +18,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class ProductTableComponent extends Notifications implements OnInit {
 
   public displayedColumns:any[] = ['id','name', 'price', 'category', 'actions'];
-  public dataSource:MatTableDataSource<any> = new MatTableDataSource(ELEMENT_DATA);
+  public dataSource:MatTableDataSource<any> = new MatTableDataSource();
 
   constructor(private router:Router,private productService: ProductService, public toastrService: ToastService) {
     super(toastrService);

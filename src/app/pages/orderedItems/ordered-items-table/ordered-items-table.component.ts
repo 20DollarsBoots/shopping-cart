@@ -6,20 +6,6 @@ import { OrderedItem } from 'src/app/models/OrderedItem';
 import { OrderedItemService } from 'src/app/services/orderedItems.service';
 import { Notifications } from 'src/app/utils/Notifications';
 
-export interface PeriodicElement {
-  order: string;
-  id: number;
-  product: string;
-  unitPrice:string;
-  amount:number;
-  totalPrice:string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {id: 1, order: '1456', product:'Martelo',unitPrice:'33,60',amount:6,totalPrice:'201,60' },
-  {id: 2, order: '899', product: 'Perfume',unitPrice:'189,97',amount:1,totalPrice:'189,97'},
-  {id: 3, order: '485', product: 'Capa para celular',unitPrice:'25,00',amount:4,totalPrice:'100,00' },]
-
 @Component({
   selector: 'app-ordered-items-table',
   templateUrl: './ordered-items-table.component.html',
@@ -41,7 +27,7 @@ export class OrderedItemsTableComponent extends Notifications implements OnInit 
     'totalPrice',
     'actions'
   ];
-  public dataSource:MatTableDataSource<any> = new MatTableDataSource(ELEMENT_DATA);
+  public dataSource:MatTableDataSource<any> = new MatTableDataSource();
 
   constructor(private router:Router,private orderedItemService: OrderedItemService, public toastrService: ToastService) {
     super(toastrService);
