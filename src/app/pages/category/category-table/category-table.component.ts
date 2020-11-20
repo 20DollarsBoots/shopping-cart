@@ -14,16 +14,12 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {id: 1, name: 'Hydrogen', description: 'H'},
-  {id: 2, name: 'Helium', description: 'He'},
-  {id: 3, name: 'Lithium', description: 'Li'},
-  {id: 4, name: 'Beryllium', description: 'Be'},
-  {id: 5, name: 'Boron', description: 'B'},
-  {id: 6, name: 'Carbon',  description: 'C'},
-  {id: 7, name: 'Nitrogen',  description: 'N'},
-  {id: 8, name: 'Oxygen',  description: 'O'},
-  {id: 9, name: 'Fluorine',  description: 'F'},
-  {id: 10, name: 'Neon',  description: 'Ne'},
+  {id: 1, name: 'Ferramentas', description: 'Exemplo :Martelo, Furadeira'},
+  {id: 2, name: 'Perfumaria', description: 'Exemplo: Perfumes, Desodorantes'},
+  {id: 3, name: 'Escolar', description: 'Exemplo, Estojo, Caderno'},
+  {id: 4, name: 'Alimentos', description: 'Exemplo: Bebidas, Comidas'},
+  {id: 5, name: 'Telefonia', description: 'Exemplo: Carregador, Fone de Ouvido'},
+ 
 ];
 
 @Component({

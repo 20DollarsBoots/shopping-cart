@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'shopping-cart';
   showFiller = false;
 
-  showSidenav: boolean = false;
+  showSidenav: boolean = true;
 
   constructor() {
   }
