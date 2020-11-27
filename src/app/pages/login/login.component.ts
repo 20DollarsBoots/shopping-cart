@@ -39,6 +39,7 @@ export class LoginComponent extends Notifications implements OnInit {
         sessionStorage.setItem('user', JSON.stringify(newUser));
         sessionStorage.setItem('user_token', user.token);
         this.router.navigate(['home']);
+        window.location.reload();
       } 
     })
   }
